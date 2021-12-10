@@ -1,0 +1,114 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "Name": "Pratiksha Nagoshe",
+      "Salary": 400000
+    },
+    {
+      "id": 2,
+      "name": "Priyanka Chopra",
+      "Salary": 500000
+    },
+    {
+      "firstName": "Mark Smith",
+      "Salary": 200000,
+      "id": 3
+    },
+    {
+      "name": "Luther Thomas",
+      "Salary": 500000,
+      "id": 5
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 6
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 7
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 8
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 9
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 10
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 11
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 12
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 13
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 14
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 15
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 16
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 17
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 18
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 19
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 20
+    },
+    {
+      "name": "Bakugo",
+      "salary": "1000000",
+      "id": 21
+    },
+    {
+      "name": "Bakugo",
+      "salary": "1000000",
+      "id": 22
+    },
+    {
+      "name": "Bakugo",
+      "salary": "100000",
+      "id": 23
+    }
+  ]
+}
