@@ -14,24 +14,81 @@
 </head>
 
 <body>
+
+ 
   <header class="header-content header">
     <div class="logo-content">
-      <img src="../assets/images/logo.png" alt="logo" />
+      <img src="../assets/images/logo.png" alt="logo"  />
       <div>
         <span class="addressBook-text">Address</span><br />
         <span class="addressBook-text addressBook-book">Book</span>
       </div>
     </div>
   </header>
+
+
   <div class="form-content">
-    <form action="#" class="form" onreset="resetForm()" onsubmit="save()">
-        <div class="form-head">
-          <div class="form-head-text">PERSON ADDRESS FORM</div>
-          <a href="../pages/address_book_form.html"><img class="form-head-image" src="../assets/icons/cancel.png " width="40" height="40"
-              alt="logo"></a>
-        </div>
-      </form>
+    <form action="#" class="form" >
+      <div class="form-head">
+        <div class="form-head-text">Person Address Form</div>
+        <a href="../pages/address_book_home.html"><img class="form-head-image" src="../assets/icons/cancel.png"
+            alt="logo"></a>
       </div>
+ 
+      <div class="form-con">
+        <div class="row-content">
+          <label for="name" class="label text">Full Name</label>
+          <br>
+          <input type="text" class="input" id="name" name="name" placeholder="name.." autocomplete="off" required>
+          
+        </div>
+        <div class="row-content">
+          <label for="phoneNumber" class="label text">Phone Number</label>
+          <br>
+          <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder=" phone number.."
+            autocomplete="off" required>
+          <error-output class="tel-error"></error-output>
+        </div>
+        <div class="row-content">
+          <label for="address" class="label text">Address</label>
+          <br>
+          <textarea name="address" id="address" placeholder="address.." autocomplete="off" required></textarea>
+         
+        </div>
+        <div class="row-content">
+          <div class="column-con">
+            <div class="column-content">
+              <label for="city" class="label text">City</label>
+              <br>
+              <select name="city" id="city" required>
+               
+                <option value="Bangalore">Bangalore</option>
+               <option value="Delhi">Delhi</option>
+                
+              </select>
+            </div>
+            <div class="column-content">
+              <label for="state" class="label text">State</label>
+              <br>
+              <select name="state" id="state">
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+               
+              </select>
+            </div>
+            <div class="column-content">
+              <label for="zip" class="label text">Zip code</label>
+              <br>
+              <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
+   
+            </div>
+          </div>
+        </div>
+        </div>
     </form>
   </div>
 </body>
