@@ -41,11 +41,37 @@
     color: #4a5966;
   }
   .form-content {
-    height: 1000px;
+    height: 200px;
     background-color: #f7f7f7;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
   }
   
+  .form {
+    background: #ffffff 0% 0%  padding-box;
+    min-width: 1000px;
+    margin: 3%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    opacity: 1;
+  }
   
-
+  .form-head {
+    display: flex;
+    background: #4393d4 0% 0%  padding-box no-repeat;
+    border-radius: 8px ;
+    opacity: 1;
+    padding: 30px;
+  }
   
+  .form-head-text {
+ 
+     text-align: center;
+     margin: 0 auto;
+    font: normal 36px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
