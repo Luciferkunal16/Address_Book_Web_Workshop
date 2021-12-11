@@ -1,5 +1,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+  validateName();
+  validatePhoneNumber();
+  validateAddress();
+  validateZipcode();
+});
 
+const validateName = () => {
   const name = document.querySelector("#name");
   name.addEventListener("input", function () {
     if (name.value.length == 0) {
@@ -13,7 +19,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".name-error", error);
     }
   });
+};
 
+const validatePhoneNumber = () => {
   const phoneNumber = document.querySelector("#phoneNumber");
   phoneNumber.addEventListener("input", function () {
     if (phoneNumber.value.length == 0) {
@@ -27,7 +35,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".tel-error", error);
     }
   });
+};
 
+const validateAddress = () => {
   const address = document.querySelector("#address");
   address.addEventListener("input", function () {
     if (address.value.length == 0) {
@@ -41,7 +51,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".address-error", error);
     }
   });
+};
 
+const validateZipcode = () => {
   const zip = document.querySelector("#zip");
   zip.addEventListener("input", function () {
     if (zip.value.length == 0) {
@@ -55,10 +67,30 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".zip-error", error);
     }
   });
+};
 
-});
+const save = () => {
+  try {
+    let contact = createContact();
+    createAndUpdateStorage(contact);
+  } catch (error) {
+    alert(error);
+  }
+};
 
-function save() {
+const createAndUpdateStorage = (contact) => {
+  let contactList = JSON.parse(localStorage.getItem("ContactList"));
+  if (contactList != undefined) {
+    contactList.push(contact);
+  } else {
+    contactList = [contact];
+  }
+  alert(contact.toString());
+  alert("Contact Added Sucessfully");
+  localStorage.setItem("ContactList", JSON.stringify(contactList));
+}
+
+const createContact = () => {
   let contact = new Contact();
   contact.id = new Date().getTime();
 
@@ -82,7 +114,7 @@ function save() {
     setTextValue(".address-error", error);
     throw error;
   }
-  
+
   let city = getInputValueById("#city");
   if (city != "Select City") {
     contact.city = city;
@@ -104,7 +136,8 @@ function save() {
     throw error;
   }
 
-  console.log(contact.toString());
+  alert(contact.toString());
+  return contact;
 }
 
 const setTextValue = (id, value) => {
@@ -112,7 +145,7 @@ const setTextValue = (id, value) => {
   element.textContent = value;
 };
 
-function getInputValueById(property) {
+const getInputValueById = (property) => {
   let value = document.querySelector(property).value;
   return value;
-}
+};
