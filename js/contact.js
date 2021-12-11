@@ -1,6 +1,6 @@
 const nameRegex = RegExp("^[A-Z]{1}[A-Za-z\\s]{2,}$");
 const phoneNumberRegex = RegExp("^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$");
-const addressRegex = RegExp('^[a-zA-Z0-9#,&]{4,}$');
+const addressRegex = RegExp('^[a-zA-Z0-9#,&\\s]{4,}$');
 const zipRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");
 
 class Contact {
@@ -19,7 +19,7 @@ class Contact {
     if (nameRegex.test(name)) {
       this._name = name;
     } else {
-      throw "NAME  Invalid!";
+      throw "NAME is Invalid!";
     }
   }
 
@@ -30,7 +30,7 @@ class Contact {
     if (phoneNumberRegex.test(phoneNumber)) {
       this._phoneNumber = phoneNumber;
     } else {
-      throw "PHONE  Invalid!";
+      throw "PHONE NUMBER is Invalid!";
     }   
   }
 
@@ -41,7 +41,7 @@ class Contact {
     if (addressRegex.test(address)) {
       this._address = address;
     } else {
-      throw "ADDRESS  Invalid!";
+      throw "ADDRESS is Invalid!";
     }
   }
   
@@ -66,7 +66,7 @@ class Contact {
     if (zipRegex.test(zip)) {
       this._zip = zip;
     } else {
-      throw "ZIP  Invalid!";
+      throw "ZIP is Invalid!";
     }
   }
 
