@@ -149,3 +149,15 @@ const getInputValueById = (property) => {
   let value = document.querySelector(property).value;
   return value;
 };
+const resetForm = () => {
+  setValue("#name", "");
+  setValue("#phoneNumber", "");
+  setValue("#address", "");
+  setSelectedIndex('#city', 0);
+  setSelectedIndex('#state', 0);
+  setValue("#zip", "");
+  setTextValue(".name-error", "");
+  setTextValue(".tel-error", "");
+  setTextValue(".address-error", "");
+  setTextValue(".zip-error", "");
+};
