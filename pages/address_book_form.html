@@ -28,10 +28,10 @@
 
 
   <div class="form-content">
-    <form action="#" class="form" >
+    <form action="#" class="form" onreset="resetForm()" onsubmit="save()">
       <div class="form-head">
         <div class="form-head-text">Person Address Form</div>
-        <a href="../pages/address_book_home.html"><img class="form-head-image" src="../assets/icons/cancel.png"
+        <a href="../pages/address_book_form.html"><img class="form-head-image" src="../assets/icons/cancel.png"
             alt="logo"></a>
       </div>
  
@@ -40,7 +40,7 @@
           <label for="name" class="label text">Full Name</label>
           <br>
           <input type="text" class="input" id="name" name="name" placeholder="name.." autocomplete="off" required>
-          
+          <error-output class="name-error"></error-output>
         </div>
         <div class="row-content">
           <label for="phoneNumber" class="label text">Phone Number</label>
@@ -53,7 +53,7 @@
           <label for="address" class="label text">Address</label>
           <br>
           <textarea name="address" id="address" placeholder="address.." autocomplete="off" required></textarea>
-         
+          <error-output class="address-error"></error-output>
         </div>
         <div class="row-content">
           <div class="column-con">
@@ -84,13 +84,20 @@
               <label for="zip" class="label text">Zip code</label>
               <br>
               <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
-   
+              <error-output class="zip-error"></error-output>
             </div>
           </div>
         </div>
+        <div class="buttons-contact">
+          <button type="submit" class="button button-submit" id="submitButton">Add</button>
+          <button type="reset" class="button button-reset" id="resetButton">Reset</button>
         </div>
+      </div>
     </form>
   </div>
+  </div>
+  <script src="../js/address_book_form.js"></script>
+  <script src="../js/contact.js"></script>
 </body>
 
 </html>
